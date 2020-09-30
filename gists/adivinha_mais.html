@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<br>
+<input/> 
+<button> Compare com o meu numero aleatório </button>
+<br>
+
+<script>
+	
+	const numeroPensado = Math.round(Math.random()*10);
+	console.log(numeroPensado);	
+
+	const input = document.querySelector("input");
+	input.focus();
+
+	const verifica = () => {
+		if(input.value == numeroPensado ) {
+			alert("Parabéns, você acertou!");
+		} else if(input.value > numeroPensado) {
+			alert("Poxa, o numero aleatório era menor do que " + input.value);
+		}
+		if(numeroPensado > input.value) {
+			alert("Poxa, o numero aleatório era maior do que " + input.value);
+		}
+		input.value = "";
+		input.focus(); 
+	}
+	
+	const botão = document.querySelector("button");
+	botão.onclick = verifica;
+</script> 

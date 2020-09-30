@@ -1,0 +1,56 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    const tela = document.querySelector('canvas');
+    const pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    const raio = 10;
+
+    let alvoX;
+    let alvoY;
+
+    const sorteiaPosição = (maximo) => valorSorteado = Math.floor(Math.random()*maximo);
+
+    const desenhaCirculo = (clicaX, clicaY, raio, cor) => {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(clicaX, clicaY, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+    desenhaAlvo = () => {
+
+        do{
+            alvoX = sorteiaPosição(600-(raio*3));
+        }
+        while(alvoX < (raio*3));
+
+        do{
+            alvoY = sorteiaPosição(400-(raio*3));
+        } while(alvoY < (raio*3));
+
+console.log(alvoX, alvoY);
+        pincel.fillStyle = "lightgray";
+        pincel.fillRect(0,0,600,400);
+
+        desenhaCirculo(alvoX,alvoY, raio + (raio * 2), 'red'); // maior círculo
+        desenhaCirculo(alvoX,alvoY, raio + raio, 'white');
+        desenhaCirculo(alvoX,alvoY, raio, 'red'); // menor circulo
+    }
+    const dispara = (evento) => {
+        const clicaX = evento.pageX - tela.offsetLeft;
+        const clicaY = evento.pageY - tela.offsetTop;
+       // lógica de acerto
+       if( (clicaX > alvoX - raio) 
+          && (clicaX < alvoX + raio) 
+            && (clicaY > alvoY - raio) 
+              && (clicaY < alvoY + raio) ) {
+                alert ("acertou!");}
+   }
+   
+    tela.onclick = dispara;
+    setInterval(desenhaAlvo, 1000);
+</script>

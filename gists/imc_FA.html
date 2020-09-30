@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<script>
+	const pulaLinha =() => document.write("<br>");
+	
+	const mostra = (nome, imcResultado) => {
+		document.write("O imc de " + nome + " é " + imcResultado + "." )
+	}
+	
+	var nome = prompt("Por Favor, informe seu nome:")
+
+	var alturaInformada = prompt("Informe sua altura:"); 
+	// if altura maior de 3 criar alerta de ponto 
+	// if altura diferente de um unico valor, criar alerta de ponto
+	var pesoInformado = prompt("Informe seu peso:"); 
+	var imcInformado = pesoInformado /(alturaInformada*alturaInformada);
+	// if altura ou peso NaN criar alerta de numero 
+pulaLinha();
+	mostra(nome, imcInformado) ;
+pulaLinha();
+	if(imcInformado < 17) {
+		document.write("O seu IMC indica que você está muito abaixo do peso ideal. Por favor, se cuide. ^^ ");
+	}
+	if(imcInformado < 18.49 && imcInformado > 17 ) {	
+		document.write("O seu IMC indica que você está abaixo do peso ideal.");
+	}
+	if(imcInformado < 24.99 && imcInformado > 18.50){
+		document.write("O seu IMC indica que você está no peso ideal. Parabéns!!");
+	}
+	if(imcInformado < 29,99 && imcInformado > 25 ){
+		document.write("O seu IMC indica que você está acima do peso ideal.");
+	}
+	if(imcInformado > 30){
+		document.write("O seu IMC indica que você está bastante acima do peso ideal. Por favor, se cuide. ^^ "); 
+	} 
+
+</script>	
