@@ -1,0 +1,23 @@
+header {
+	background: #cccccc;
+	padding: 20px 10px;
+}
+h1{
+	font-weight: bold;
+	font-size: 35px; 
+}
+nav {
+	position: absolute;
+	top: 27px;
+	right: 25px;
+}
+nav li {
+	display: inline;
+	margin:10px 0px 0px 20px;
+}
+nav a{
+	color: #000000;
+	font-size: 22px;
+	text-decoration: none;
+	font-weight: bold;
+}

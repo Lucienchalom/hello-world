@@ -1,12 +1,13 @@
 .principal {
-	background: #CCCCCC;
+	background: #dddddd;
 	padding: 20px;
 }
 p {
 	font-size: 20px;
+	padding-top: 5px;
 }
 .lista {
-	font-size: 25px;
+	font-size: 23px;
 	font-style: italic;
 }
 #treino{
@@ -16,6 +17,12 @@ p {
 	vertical-align: top;
 	width: 25%;
 	margin: 0% 15%;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
 }
 strong em {
 	color: purple;
