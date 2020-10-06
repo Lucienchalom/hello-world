@@ -17,6 +17,7 @@ p {
 	vertical-align: top;
 	width: 25%;
 	margin: 0% 15%;
+	font-size: 20px;
 }
 strong {
 	font-weight: bold;
@@ -27,6 +28,13 @@ em {
 strong em {
 	color: purple;
 }
+#segundo-teste:hover {
+	color: #A14DFA;
+}
+#segundo-teste:active{
+	color:#36CDFF;
+}
+
 #cutecat {
 	width: 35%;
 }
