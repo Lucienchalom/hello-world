@@ -32,9 +32,16 @@ strong em {
 	color: #A14DFA;
 }
 #segundo-teste:active{
-	color:#36CDFF;
+	color:#E33BC0;
 }
-
 #cutecat {
 	width: 35%;
+}
+footer{
+	text-align: center;
+	background: url(imagens/rodape.png);
+	padding: 15px 0px;
+}
+footer p{
+	font-size: 15px;
 }
