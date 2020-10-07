@@ -1,0 +1,10 @@
+main {
+	position: relative;
+}
+#pulsa{
+	position: absolute;
+	right: 150px;
+}
+canvas {
+	display: inline-block;
+}

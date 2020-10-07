@@ -21,5 +21,72 @@
 				</ul>
 			</nav>
 		</header>
+		<main class="animações">	
+			<div>
+				<canvas id="anda" width="600" height="50"></canvas>
+				<script>
+				    const tela = document.querySelector('canvas');
+				    const pincel = tela.getContext('2d');
+				    pincel.fillStyle = 'lightgray';
+				    pincel.fillRect( 0, 0, 600, 50);
+				    var x = 20;
+				    
+				    const desenhaCirculo = ( x ) => {
+				    	pincel.fillStyle = 'blue';
+				    	pincel.beginPath();
+				    	pincel.arc(x, 20, 10, 0, 2* Math.PI);
+				        pincel.fill();
+				    }
+				    var sentido = 1;
+				    const animaCirculo = () =>{
+				    	pincel.clearRect( 0, 0, 600, 100);
+				    
+				        if(x > 590){
+				    	sentido = -3;
+				    	}
+				    	if (x < 20){
+				    	sentido = +1;
+				    	}
+				        desenhaCirculo( x );
+				    	x = x + sentido;
+				    }
+
+					setInterval( animaCirculo, 10);
+				</script>
+			</div>	
+			<div>
+				<canvas id="pulsa" width="200" height="200"></canvas>
+				<script>
+					var telaPulsa = document.getElementById("pulsa");
+					const pincelPulsa = telaPulsa.getContext("2d");
+
+					var sentidoContador = 1;
+					var raioPulsa = 20;
+					const desenhaBolinha = ( xPulsa, yPulsa, raioPulsa) => {
+						pincelPulsa.fillStyle = 'violet';
+						pincelPulsa.beginPath();
+						pincelPulsa.arc(xPulsa, yPulsa, raioPulsa, 0, 2* Math.PI);
+						pincelPulsa.fill();
+					}
+
+
+					const animaBolinha = () =>{
+						pincelPulsa.clearRect( 0, 0, 200, 200);
+
+						if(raioPulsa > 50){
+							sentidoContador = -1;
+						}
+						if(raioPulsa < 20){
+							sentidoContador = +1;
+						}
+					desenhaBolinha( 100, 100, raioPulsa);
+
+						raioPulsa = raioPulsa + sentidoContador;
+					}
+
+					setInterval( animaBolinha , 30);
+				</script>
+			</div>
+		</main>	
 	</body>
 </html>	
