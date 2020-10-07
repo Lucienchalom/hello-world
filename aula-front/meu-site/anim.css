@@ -1,0 +1,21 @@
+main {
+	position: relative;
+	padding-top: 10px;
+}
+div p{
+display: inline-block;
+width: 200px;
+padding: 20px
+}
+div p a{
+	text-decoration: none;
+	color: #1A6AEB;
+	font-weight: bold; 
+}
+#pulsa{
+	position: absolute;
+	left: 200px;
+}
+canvas {
+	display: inline-block;
+}
