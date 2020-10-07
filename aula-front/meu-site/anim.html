@@ -5,7 +5,7 @@
 		<title>Animações</title>
 		<link rel="stylesheet" type="text/css" href="reset.css">
 		<link rel="stylesheet" type="text/css" href="barra_nav.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="anim.css">
 	</head>
 
 	<body>
@@ -25,7 +25,7 @@
 			<div>
 				<canvas id="anda" width="600" height="50"></canvas>
 				<script>
-				    const tela = document.querySelector('canvas');
+				    const tela = document.getElementById("anda");
 				    const pincel = tela.getContext('2d');
 				    pincel.fillStyle = 'lightgray';
 				    pincel.fillRect( 0, 0, 600, 50);
@@ -55,6 +55,9 @@
 				</script>
 			</div>	
 			<div>
+				<p>
+					Exercicios de animação com variadas velocidades durante o curso de Lógica de Programação da <a href="https://www.alura.com.br/">Alura.</a>
+				</p>
 				<canvas id="pulsa" width="200" height="200"></canvas>
 				<script>
 					var telaPulsa = document.getElementById("pulsa");
