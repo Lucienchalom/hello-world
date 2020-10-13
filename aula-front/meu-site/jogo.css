@@ -1,4 +1,30 @@
-
-h2{
-display: inline;
+main {
+	position: relative;
+}
+#lista-jogos{
+	background-color: #12DBFF;
+	width: 250px;
+	padding: 5px 5px;
+} 
+.menu-jogos{
+	font-size: 22px;
+	display: inline-block;
+}
+.menu-jogos a{
+	text-decoration: none;
+	color: #000000;
+	width: 250px;
+	padding: 5px;
+	display: block;
+}
+.menu-jogos a:hover{
+	color: #A14DFA;
+}
+.menu-jogos a:active{
+	color:#E33BC0;
+}
+canvas{
+	position: absolute;
+	top: 0px;
+	left: 300px; 
 }
