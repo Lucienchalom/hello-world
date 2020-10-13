@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Jogos</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="barra_nav.css">
+		<link rel="stylesheet" href="jogo.css">
+	</head>
+
+	<body>
+		<header>
+			<h1> Jogos </h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="jogo.html">Jogos</a></li>
+					<li><a href="anim.html">Animações</a></li>
+					<li><a href="interac.html">Feramentas</a></li>
+					<li><a href="contatos.html">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="nav-lateral">
+				<ul id="lista-jogos">
+					<li class="menu-jogos"><a href="jogo-adivinha.html"> Adivinha o numero</a></li>
+					<li class="menu-jogos"><a href="jogo-encontre.html">Encontre um dos numeros</a></li>
+					<li class="menu-jogos"><a href="jogo.html">Bala no alvo</a></li>
+					<li class="menu-jogos"><a href="jogo-seta.html">movimento da seta</a></li>
+					<!--<li class="menu-jogos"><a href="jogo-peixe.html">Peixes e algas</a></li>-->
+				</ul>	
+			</div>
+			<div id="adivinha">
+
+				<input/> 
+				<button> Compare com o meu numero aleatório </button>
+
+				<script>	
+					const numeroPensado = Math.round(Math.random()*10);
+					console.log(numeroPensado);	
+
+					const input = document.querySelector("input");
+					input.focus();
+
+					const verifica = () => {
+						if(input.value == numeroPensado ) {
+							alert("Parabéns, você acertou!");
+						} else if(input.value > numeroPensado) {
+							alert("Poxa, o numero aleatório era menor do que " + input.value);
+						}
+						if(numeroPensado > input.value) {
+							alert("Poxa, o numero aleatório era maior do que " + input.value);
+						}
+						input.value = "";
+						input.focus(); 
+					}
+					
+					const botão = document.querySelector("button");
+					botão.onclick = verifica;
+				</script>
+			</div>
+		</main>
+	</body>
+</html>	
