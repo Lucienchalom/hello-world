@@ -1,0 +1,26 @@
+main {
+	position: relative;
+}
+#lista-jogos{
+	width: 250px;
+	padding: 5px 5px;
+	background-color: #12DBFF;
+} 
+.menu-jogos{
+	font-size: 22px;
+	display: inline-block;
+}
+.menu-jogos a{
+	background-color: #12DBFF;
+	text-decoration: none;
+	color: #000000;
+	width: 250px;
+	padding: 5px 0 5px 5px;
+	display: block;
+}
+.menu-jogos a:hover{
+	color: #A14DFA;
+}
+.menu-jogos a:active{
+	color:#E33BC0;
+}
