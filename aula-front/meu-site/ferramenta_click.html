@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Feramentas</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="barra_nav.css">
+		<link rel="stylesheet" href="ferramenta.css">
+	</head>
+
+	<body>
+		<header>
+			<h1> Feramentas </h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="jogo.html">Jogos</a></li>
+					<li><a href="animacao.html">Animações</a></li>
+					<li><a href="ferramenta.html">Feramentas</a></li>
+					<li><a href="contatos.html">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="nav-lateral">
+				<ul id="lista-tool">
+					<li class="menu-tool"><a href="ferramenta_click.html">Desenhe com clicks</a></li>
+					<li class="menu-tool"><a href="ferramenta.html">Desenhe com barra de cor</a></li>
+					<li class="menu-tool"><a href="ferramenta_IMC.html">Calcule o IMC</a></li>
+					<!--<li class="menu-tool"><a href="receita.html">Receita</a></li>-->
+				</ul>	
+			</div>
+			<canvas width="600" height="400"></canvas>
+
+			<script>
+				const tela = document.querySelector('canvas');
+				const pincel = tela.getContext('2d');
+				pincel.fillStyle = 'lightgray';
+				pincel.fillRect(0,0,600,400);
+
+				var contador = 0;
+				var cores = ['blue','red','green'];
+				var raio = 10;
+
+				const desenhaBolinha = (evento) => {
+					var x = evento.pageX - tela.offsetLeft;
+					var y = evento.pageY - tela.offsetTop; 
+
+					if(evento.shiftKey && evento.altKey){
+						alert('Cuidado! Uma tecla de cada vez ;)');
+					}
+					if(raio < 40 && evento.shiftKey == true){
+						raio = raio + 10;
+					}
+
+					if(raio > 10 && evento.altKey == true){
+							raio = raio - 5;
+					}
+					pincel.fillStyle = cores[contador];
+					pincel.beginPath();
+					pincel.arc( x, y, raio, 0, 2*3.14);
+					pincel.fill();
+				}
+				
+				var mudaCor = () => {
+					contador++;
+					if(contador >= cores.length) {
+						contador = 0 ;
+					}
+					return false;
+					console.log(contador);
+				}
+
+				tela.onclick = desenhaBolinha;
+				tela.oncontextmenu = mudaCor;
+
+			</script>	
+		</main>
+	</body>
+</html>	
