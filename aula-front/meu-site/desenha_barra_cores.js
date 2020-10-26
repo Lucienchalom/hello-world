@@ -27,8 +27,8 @@ const desenhaPaletaDeCores = () => {
 
 const lidaComMovimentoDoMouse = (evento) => {
 
-    var x = evento.pageX - tela.offsetLeft;
-    var y = evento.pageY - tela.offsetTop;
+    const x = evento.pageX - tela.offsetLeft;
+    const y = evento.pageY - tela.offsetTop;
 
     if(desenha && desenharNoBotão(x,y)) {
         desenhaCirculo(x, y, 5, corAtual);
@@ -40,13 +40,8 @@ const habilitaDesenhar = () => desenha = true;
 const desabilitaDesenhar = () => desenha = false;
 
 var desenharNoBotão = (x,y)=>{
-
-    if(x < (tamanhoQuadrados*6 + 5) && y < tamanhoQuadrados + 5){
-        return false;
-    }else {
-        return true;
-    }// 5 é o raio, pra bolinha não entrar nem pela metade na Paleta
-
+    return !(x < (tamanhoQuadrados*6 + 5) && y < tamanhoQuadrados + 5)
+    // 5 é o raio, pra bolinha não entrar nem pela metade na Paleta
 }
 
 var mudaCor = (evento) => {

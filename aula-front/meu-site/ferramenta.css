@@ -32,6 +32,18 @@ canvas{
 	border-width: 2px;
 	border-style: solid;
 }
-#IMC {
-	
+form {
+	position: absolute;
+	top: 85px;
+	left: 280px;
+}
+label {	
+	display: block;
+	padding: 5px;
+}
+#nomeResultado {
+	position: relative;
+	top: 32px;
+	left: 280px;
+
 }
