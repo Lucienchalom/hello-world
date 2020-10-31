@@ -1,7 +1,7 @@
 const tela = document.querySelector('canvas');
 const pincel = tela.getContext('2d');
 pincel.fillStyle = 'lightgray';
-pincel.fillRect(0,0,600,400);
+pincel.fillRect(0, 0, 600, 400);
 
 let contador = 0;
 var cores = ['blue','red','green'];
@@ -19,7 +19,7 @@ const desenhaBolinha = (evento) => {
 	}
 
 	if(raio > 10 && evento.altKey == true){
-			raio = raio - 5;
+		raio = raio - 5;
 	}
 	pincel.fillStyle = cores[contador];
 	pincel.beginPath();

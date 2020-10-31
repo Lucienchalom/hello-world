@@ -14,12 +14,12 @@ var baixo = 40;
 const taxa = 10;
 
 const recebeTeclado = (evento) => {
-    if (evento.keyCode == esquerda){ x = x - taxa;}
-    if (evento.keyCode == cima){y = y - taxa;}
-    if(evento.keyCode == direita){x = x + taxa;}
-    if(evento.keyCode == baixo){y = y + taxa;}
-
+    if (evento.keyCode == esquerda) x = x - taxa;
+    if (evento.keyCode == cima) y = y - taxa;
+    if(evento.keyCode == direita) x = x + taxa;
+    if(evento.keyCode == baixo) y = y + taxa;
 }
+
 const desenhaCirculo = ( x, y, raio) => {
 	pincel.fillStyle = 'violet';
 	pincel.beginPath();
@@ -32,5 +32,5 @@ const animaBolinha = () =>{
 	desenhaCirculo( x, y, 20);
 }
 
-setInterval( animaBolinha , 20);
+setInterval(animaBolinha , 20);
 document.onkeydown = recebeTeclado;

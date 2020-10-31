@@ -1,5 +1,3 @@
-
-
 const tela = document.querySelector('canvas');
 const pincel = tela.getContext('2d');
 
@@ -11,7 +9,7 @@ const raio = 10;
 let alvoX;
 let alvoY;
 
-const sorteiaPosição = (maximo) => valorSorteado = Math.floor(Math.random()*maximo);
+const sorteiaPosicao = (maximo) => valorSorteado = Math.floor(Math.random()*maximo);
 
 const desenhaCirculo = (alvoX, alvoY, raio, cor) => {
     pincel.fillStyle = cor;
@@ -20,23 +18,23 @@ const desenhaCirculo = (alvoX, alvoY, raio, cor) => {
     pincel.fill();
 }
 desenhaAlvo = () => {
-
     do{
-        alvoX = sorteiaPosição(600-(raio*3));
+        alvoX = sorteiaPosicao(600 - (raio * 3));
     }
-    while(alvoX < (raio*3));
+    while(alvoX < (raio * 3));
 
     do{
-        alvoY = sorteiaPosição(400-(raio*3));
-    } while(alvoY < (raio*3));
+        alvoY = sorteiaPosicao(400 - (raio * 3));
+    }
+    while(alvoY < (raio * 3));
 
 	console.log(alvoX, alvoY);
     pincel.fillStyle = "lightgray";
-    pincel.fillRect(0,0,600,400);
+    pincel.fillRect(0, 0, 600, 400);
 
-    desenhaCirculo(alvoX,alvoY, raio + (raio * 2), 'red'); // maior círculo
-    desenhaCirculo(alvoX,alvoY, raio + raio, 'white');
-    desenhaCirculo(alvoX,alvoY, raio, 'red'); // menor circulo
+    desenhaCirculo(alvoX, alvoY, raio + (raio * 2), 'red'); // maior círculo
+    desenhaCirculo(alvoX, alvoY, raio + raio, 'white');
+    desenhaCirculo(alvoX, alvoY, raio, 'red'); // menor circulo
 }
 const dispara = (evento) => {
     const clicaX = evento.pageX - 300; // ajustar com position left do canvas no css
@@ -46,8 +44,9 @@ const dispara = (evento) => {
       && (clicaX < alvoX + raio) 
         && (clicaY > alvoY - raio) 
           && (clicaY < alvoY + raio) ) {
-            alert ("acertou!");}
-		console.log(clicaX, clicaY)
+            alert ("acertou!");
+          }
+	console.log(clicaX, clicaY)
 }
 tela.onclick = dispara;
 setInterval(desenhaAlvo, 1000);

@@ -18,5 +18,5 @@ const verifica = () => {
 	input.focus(); 
 }
 
-const botão = document.querySelector("button");
-botão.onclick = verifica;
+const botao = document.querySelector("button");
+botao.onclick = verifica;

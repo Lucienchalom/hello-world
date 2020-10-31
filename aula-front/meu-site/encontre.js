@@ -1,4 +1,3 @@
-
 const random = () => Math.round(Math.random() * 10);  
 
 const sorteia = (quantidade) => {
@@ -15,13 +14,13 @@ const sorteia = (quantidade) => {
 				 	break;
  			 	}
 		 	}
-	 		 	if(tem == false){
-	 		 		segredos.push(numeroAleatorio);
-				 	contador++;
- 			 	}
+ 		 	if(tem == false){
+ 		 		segredos.push(numeroAleatorio);
+			 	contador++;
+			}
  		}
 	}
-		return segredos;
+	return segredos;
 }
 
 var segredos = sorteia(3);// quantos valores possiveis na array
@@ -31,19 +30,18 @@ input.focus();
 
 const verifica = () => {
 	var sucesso = false;
-	for(var posição = 0; posição < segredos.length; posição ++){
-		if(input.value == segredos[posição]) {
+	for(var posicao = 0; posicao < segredos.length; posicao ++){
+		if(input.value == segredos[posicao]) {
 			alert("Parabéns, você acertou!");
 			sucesso = true;
 			break;
 		} 
 	}
-	if(sucesso == false){ 
-	alert("Você errou, que pena");
-	}
+	if(sucesso == false) alert("Você errou, que pena");
+
 	input.value = "";
 	input.focus(); 
 }
 
-var botão = document.querySelector("button");
-botão.onclick = verifica;
+const botao = document.querySelector("button");
+botao.onclick = verifica;
