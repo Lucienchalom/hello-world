@@ -1,0 +1,49 @@
+toolmain {
+	position: relative;
+}
+#lista-tool{
+	width: 250px;
+	padding: 5px 5px;
+	background-color: #12DBFF;
+} 
+.menu-tool{
+	font-size: 22px;
+	display: inline-block;
+}
+.menu-tool a{
+	background-color: #12DBFF;
+	text-decoration: none;
+	color: #000000;
+	width: 250px;
+	padding: 5px 0 5px 5px;
+	display: block;
+}
+.menu-tool a:hover{
+	color: #A14DFA;
+}
+.menu-tool a:active{
+	color:#E33BC0;
+}
+canvas{
+	position: absolute;
+	top: 85px;
+	left: 300px; 
+	border-color: #cccccc;
+	border-width: 2px;
+	border-style: solid;
+}
+form {
+	position: absolute;
+	top: 85px;
+	left: 280px;
+}
+label {	
+	display: block;
+	padding: 5px;
+}
+#nomeResultado {
+	position: relative;
+	top: 32px;
+	left: 280px;
+
+}
