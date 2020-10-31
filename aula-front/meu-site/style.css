@@ -10,7 +10,7 @@ p {
 	font-size: 20px;
 	font-style: italic;
 }
-#treino{
+#treino {
 	text-align: center;
 	background: #ffffff;
 	display: inline-block;
@@ -31,17 +31,17 @@ strong em {
 #segundo-teste:hover {
 	color: #A14DFA;
 }
-#segundo-teste:active{
+#segundo-teste:active {
 	color:#E33BC0;
 }
 #cutecat {
 	width: 35%;
 }
-footer{
+footer {
 	text-align: center;
 	background: url(./imagens/rodape.PNG);
 	padding: 15px 0px;
 }
-footer p{
+footer p {
 	font-size: 15px;
 }

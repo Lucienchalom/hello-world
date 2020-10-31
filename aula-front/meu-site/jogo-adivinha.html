@@ -31,34 +31,13 @@
 					<!--<li class="menu-jogos"><a href="jogo-peixe.html">Peixes e algas</a></li>-->
 				</ul>	
 			</div>
-			<div id="adivinha">
+			<div class="jogo">
 
 				<input/> 
-				<button> Compare com o meu numero aleatório </button>
+				<button> Adivinha! </button>
+				<p>Foi escolhido um número aleatório de 0 a 10, você consegue adivinhar qual é?</p>
 
-				<script>	
-					const numeroPensado = Math.round(Math.random()*10);
-					console.log(numeroPensado);	
-
-					const input = document.querySelector("input");
-					input.focus();
-
-					const verifica = () => {
-						if(input.value == numeroPensado ) {
-							alert("Parabéns, você acertou!");
-						} else if(input.value > numeroPensado) {
-							alert("Poxa, o numero aleatório era menor do que " + input.value);
-						}
-						if(numeroPensado > input.value) {
-							alert("Poxa, o numero aleatório era maior do que " + input.value);
-						}
-						input.value = "";
-						input.focus(); 
-					}
-					
-					const botão = document.querySelector("button");
-					botão.onclick = verifica;
-				</script>
+				<script src="adivinha.js"></script>
 			</div>
 		</main>
 	</body>

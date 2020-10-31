@@ -1,22 +1,17 @@
-
 const desenhaQuadrado = (x, y, tamanho, cor) => {
-
     pincel.fillStyle = cor;
     pincel.fillRect(x, y, tamanho, tamanho);
     pincel.fill();
 }
 
 const desenhaCirculo = (x, y, raio, cor) => {
-
     pincel.fillStyle = cor;
     pincel.beginPath();
     pincel.arc(x, y, raio, 0, 2 * 3.14);
     pincel.fill();
-
 }
 
 const desenhaPaletaDeCores = () => {
-
     desenhaQuadrado(xVermelho, yQuadrados, tamanhoQuadrados, 'red');
     desenhaQuadrado(xVerde, yQuadrados, tamanhoQuadrados, 'green');
     desenhaQuadrado(xAzul, yQuadrados, tamanhoQuadrados, 'blue');
@@ -26,11 +21,10 @@ const desenhaPaletaDeCores = () => {
 }
 
 const lidaComMovimentoDoMouse = (evento) => {
-
     const x = evento.pageX - tela.offsetLeft;
     const y = evento.pageY - tela.offsetTop;
 
-    if(desenha && desenharNoBotão(x,y)) {
+    if(desenha && desenharNoBotao( x, y)) {
         desenhaCirculo(x, y, 5, corAtual);
     }
 }
@@ -39,12 +33,12 @@ const habilitaDesenhar = () => desenha = true;
 
 const desabilitaDesenhar = () => desenha = false;
 
-var desenharNoBotão = (x,y)=>{
+const desenharNoBotao = (x, y)=>{
     return !(x < (tamanhoQuadrados*6 + 5) && y < tamanhoQuadrados + 5)
     // 5 é o raio, pra bolinha não entrar nem pela metade na Paleta
 }
 
-var mudaCor = (evento) => {
+const mudaCor = (evento) => {
     var x = evento.pageX - tela.offsetLeft;
     var y = evento.pageY - tela.offsetTop;
 
@@ -79,8 +73,8 @@ const xAmarelo = 150;
 const xRoxo = 200;
 const xLaranja = 250;
 
-var yQuadrados = 0;
-var tamanhoQuadrados = 50;
+const yQuadrados = 0;
+const tamanhoQuadrados = 50;
 
 desenhaPaletaDeCores(); // mostra os quadrados de seleção de cores
 
