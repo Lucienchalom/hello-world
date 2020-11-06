@@ -5,7 +5,8 @@ main {
 div p {
 display: inline-block;
 width: 200px;
-padding: 20px
+padding: 20px;
+font-size: 20px;
 }
 div p a {
 	text-decoration: none;

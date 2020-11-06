@@ -1,0 +1,78 @@
+- cd (endereço) - abre as informações basicas da pasta
+- git init - inicia um repositório da pasta que tinha sido chamada
+- git status - 
+- HEAD: Estado atual do nosso código, ou seja, onde o Git nos colocou
+Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
+index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.
+ https://git-scm.com/book/pt-br/v2/Fundamentos-de-Git-Recording-Changes-to-the-Repository. 
+
+ http://devhints.io/git-log
+
+ https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+
+ https://devhints.io/git-log
+ 
+.gitignore eh um arquivo onde voce explica ao git, quais outros arquivos voce não quer adicioniar ao repositorio 
+
+- cd .. sobe uma pasta
+
+ - git remote -v
+ abre a lista de locais registrados de repositorio 
+
+git remote add nome-repositorio caminho/para/o/repositorio
+
+git init --bare
+Com este comando nós criamos um repositório que não terá a working tree, ou seja, não conterá uma cópia dos nossos arquivos. Como o repositório servirá apenas como servidor, para que outros membros da equipe sincronizem seus trabalhos, poupamos espaço de armazenamento desta forma.
+
+- Como criar um repositório Git sem uma cópia dos arquivos (com --bare) para ser utilizado como servidor;
+
+- Como adicionar links para os repositórios remotos, com o comando git remote add;
+
+- Como baixar um repositório pela primeira vez, clonando-o com o comando git clone;
+
+- Como enviar as nossas alterações para um repositório remoto, com git push;
+
+- Como atualizar o nosso repositório com os dados no repositório remoto, utilizando git pull;
+
+- git branch (novo branch)
+- git checkout (nome do outro branch)
+ - git checkout - b (novo branch) = atalho
+
+- git merge (nome do branch) = tem que estar no branch onde as coisas vão ficar por ultimo, (master)
+
+https://git-school.github.io/visualizing-git/
+ou git log --graph
+
+git rebase titulo (ESTUDAR)
+
+- git pull (local master) pegar primeiro o material atual e depois enviar os proprios. 
+-git push (local master) enviar material daquela branch pra master
+(preciso de pratica pra entender quando tem merge quando não)  voce merge com o master, mas só push e pull do repositorio pelo que eu entendi? 
+
+Com o git checkout nós desfazemos uma alteração que ainda não foi adicionada ao index ou stage, ou seja, antes do git add. Depois de adicionar com git add, para desfazer uma alteração, precisamos tirá-la deste estado, com git reset. Agora, se já realizamos o commit, o comando git revert pode nos salvar.
+
+Que, para guardar um trabalho para retomá-lo posteriormente, podemos utilizar o git stash;
+Que, para visualizar quais alterações estão na stash, podemos utilizar o comando git stash list;
+Que, com o comando git stash apply <numero>, podemos aplicar uma alteração específica da stash;
+Que o comando git stash drop <numero> remove determinado item da stash;
+Que o comando git stash pop aplica e remove a última alteração que foi adicionada na stash;
+
+git tag -a vO.1.0 
+-m "mensagem" 
+-a (addicionar)
+
+
+A descrição do comando git checkout --help, em uma tradução livre é: "Atualizar os arquivos na working tree para ficarem na versão especificada. [...]". Basicamente, podemos deixar o nosso código no estado do último commit de uma branch, de um commit específico, ou mesmo tags (que veremos adiante).
+
+git config --global --unset user.name
+git config --global --unset user.email
+
+git config --local user.name
+git config --local user.email
+
+https://cursos.alura.com.br/course/git-github-controle-de-versao/task/57024
+
+
+
+https://rogerdudler.github.io/git-guide/index.pt_BR.html
+

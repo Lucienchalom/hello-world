@@ -1,0 +1,125 @@
+noStroke();
+
+// simple stars
+var star=function(){
+    var randomI = random (289, 350);
+    for (var i = 0; i < randomI; i+=1) {
+    var x = i * 50;
+
+    var randomX = random(0, 400);
+    var randomH = random(0, 400);
+    stroke (255, 255, 255);
+    point(randomX, randomH);}
+    noStroke(); 
+};    
+
+// shooting star var
+var xPos = 422;
+var yPos = 28;
+
+// spaceship var
+var xShip = 70;
+var yShip =400 ;
+
+
+
+// how to make random without loop or how to stop loop after 1 frame?//
+
+draw = function() {
+    // backgroud
+    background(29, 40, 115);
+   
+ //building one
+fill(7, 4, 51);
+rect(61,204,200,200); 
+//windows one
+fill(255, 242, 0);
+for (var j = 4; j < 15; j += 1) {
+    var x = j * 17;
+for (var b = 14; b < 30; b += 1) {
+    var y = b * 15;  
+rect(x,y,10,10);}}
+ 
+  //building two
+fill(7, 4, 51);
+rect(262,139,198,279); 
+//windows two
+fill(255, 242, 0);
+for (var j = 16; j < 24; j += 1) {
+    var x = j * 17;
+for (var b = 10; b < 30; b += 1) {
+    var y = b * 15;  
+rect(x,y,10,10);}}   
+    
+    // spaceship
+    fill(255, 0, 0);
+    triangle(xShip-34,yShip+13,xShip+38,yShip+12,xShip,yShip+45);
+    fill(255, 0, 0);
+    triangle(xShip-38,yShip-13,xShip+38,yShip-13,xShip,yShip-45);
+     fill(98, 158, 82);
+    ellipse (xShip, yShip, 109, 37);
+    
+    stroke(0, 0, 0);
+    fill(9, 66, 4);
+    ellipse (xShip, yShip, 15,15);
+
+noStroke();
+
+    //shooting stars
+    fill(255, 242, 0);
+    ellipse(xPos, yPos, 10, 10);
+    ellipse(xPos+56, yPos+13, 10, 10);
+    ellipse(xPos+64, yPos+26, 10, 10);
+    ellipse(xPos+2, yPos+39, 10, 10);
+    ellipse(xPos+8, yPos+52, 10, 10); 
+    ellipse(xPos-15, yPos-5, 10, 10);
+    ellipse(xPos+32, yPos+10, 10, 10);
+    ellipse(xPos-31, yPos+18, 10, 10);
+    ellipse(xPos+3, yPos+13, 10, 10);
+    ellipse(xPos-4, yPos+25, 10, 10); 
+    ellipse(xPos-29, yPos-1, 10, 10);
+    ellipse(xPos+31, yPos+30, 10, 10);
+    ellipse(xPos+16, yPos+21, 10, 10);
+    ellipse(xPos-19, yPos+39, 10, 10);
+    ellipse(xPos-10, yPos+13, 10, 10);
+    ellipse(xPos+29, yPos-2, 10, 10);
+    ellipse(xPos+48, yPos+30, 10, 10);
+    ellipse(xPos+30, yPos+46, 10, 10);
+    ellipse(xPos+48, yPos+-5, 10, 10);
+    ellipse(xPos+52, yPos+44, 10, 10);
+    
+    //trait
+    fill(255, 242, 140,20);
+    triangle(xPos, yPos, 400,0,404,0);
+    triangle(xPos+56, yPos+13,  400,0,404,0);
+    triangle(xPos+64, yPos+26,  400,0,404,0);
+    triangle(xPos+2, yPos+39,  400,0,404,0);
+    triangle(xPos+8, yPos+52,  400,0,404,0); 
+    triangle(xPos-15, yPos-5,  400,0,404,0);
+    triangle(xPos+32, yPos+10, 400,0,404,0);
+    triangle(xPos-31, yPos+18, 400,0,404,0);
+    triangle(xPos+3, yPos+13, 400,0,404,0);
+    triangle(xPos-4, yPos+25, 400,0,404,0);
+    triangle(xPos-29, yPos-1,  400,0,404,0);
+    triangle(xPos+31, yPos+30, 400,0,404,0);
+    triangle(xPos+16, yPos+21,  400,0,404,0);
+    triangle(xPos-19, yPos+39,  400,0,404,0);
+    triangle(xPos-10, yPos+13,  400,0,404,0);
+    triangle(xPos+29, yPos-2,  400,0,404,0);
+    triangle(xPos+48, yPos+30,  400,0,404,0);
+    triangle(xPos+30, yPos+46, 400,0,404,0);
+    triangle(xPos+48, yPos+-5,  400,0,404,0);
+    triangle(xPos+52, yPos+44,  400,0,404,0);
+    
+    
+    //moviments
+    xPos -=8;
+    yPos +=5;
+    yShip-=2;
+    
+if (yShip<200){ xShip+=10;}
+
+    
+};
+
+star();

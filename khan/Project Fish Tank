@@ -1,0 +1,71 @@
+background(89, 216, 255);
+
+var fish=function(L,H){
+
+var centerX = random (0,400);
+var centerY = random(37,363);
+var bodyLength = L;
+var bodyHeight = H;
+var bodyColor = color(random(0,255), random(0,255), random(0,255));
+
+noStroke();
+fill(bodyColor);
+// body
+ellipse(centerX, centerY, bodyLength, bodyHeight);
+// tail
+var tailWidth = bodyLength/4;
+var tailHeight = bodyHeight/2;
+triangle(centerX-bodyLength/2, centerY,
+         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
+         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+// eye
+fill(33, 33, 33);
+ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
+         
+         
+};
+//fazer um random com array?
+fish(111,60);
+fish(115,63);
+fish(120,66);
+fish(125,70);
+fish(130,74);
+fish(135,77);
+fish(140,53);
+fish(145,75);
+fish(97,77);
+fish(155,64);
+fish(121,81);
+fish(139,83);
+fish(134,85);
+fish(143,62);
+fish(134,89);
+fish(180,90);
+
+// seaweed
+//click to plant it
+mouseReleased = function (){
+    var x = mouseX; 
+    var y = 400;
+    var rad = 30;
+    
+    draw = function() {
+// tirar essa função de dentro da outra, e renomear pra não dar ruim. tambem rever como eu quero fazer o espaçamento e densidade de cada bola da alga
+
+        stroke(1, 69, 6);
+        fill(1, 69, 6, 57);
+        ellipse (x+5, y+10, rad, rad);
+        ellipse (x-2, y+5, rad, rad);
+        ellipse (x+3, y-5, rad, rad);
+        ellipse (x+4, y, rad, rad);
+        ellipse (x, y, rad, rad);
+        ellipse (x+7, y, rad, rad);
+        
+        if(y>200) {y-=25;}
+        
+
+    };
+};
+
+
+
