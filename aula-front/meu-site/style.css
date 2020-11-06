@@ -1,23 +1,32 @@
 .principal {
 	background: #dddddd;
-	padding: 20px;
+	padding:0 20px 20px 20px;
+}
+.principal h2 {
+	font-size: 2em;
+	padding: 20px; 
 }
 p {
 	font-size: 20px;
 	padding-top: 5px;
+
 }
 .lista {
 	font-size: 20px;
 	font-style: italic;
 }
-#treino {
-	text-align: center;
+.sobre {
 	background: #ffffff;
 	display: inline-block;
 	vertical-align: top;
-	width: 25%;
-	margin: 0% 15%;
+	margin: 0% 10%;
 	font-size: 20px;
+	padding: 1em 0;
+}
+.sobre h3 {
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
 }
 strong {
 	font-weight: bold;
