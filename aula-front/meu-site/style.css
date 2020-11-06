@@ -9,7 +9,9 @@
 p {
 	font-size: 20px;
 	padding-top: 5px;
-
+}
+a { 
+	text-decoration: none;
 }
 .lista {
 	font-size: 20px;
@@ -27,24 +29,6 @@ p {
 	text-align: center;
 	font-size: 25px;
 	font-weight: bold;
-}
-strong {
-	font-weight: bold;
-}
-em {
-	font-style: italic;
-}
-strong em {
-	color: purple;
-}
-#segundo-teste:hover {
-	color: #A14DFA;
-}
-#segundo-teste:active {
-	color:#E33BC0;
-}
-#cutecat {
-	width: 35%;
 }
 footer {
 	text-align: center;
