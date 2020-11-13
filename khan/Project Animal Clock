@@ -1,0 +1,60 @@
+//you can move these variables at your heart content//
+
+var bodyX = 200;
+var bodyY = 200;
+var bodyW = 159;
+
+
+
+var headW = bodyW/2;
+var earY = bodyY-26/35*bodyW;
+
+
+// I don't know how to fix, but the tail and the ears are still not completely following the cat, when mouseX and mouseY are "on".  // 
+
+var tipY = 16/20*bodyY; // Y of top point
+var tipX = 9/10*bodyX; //X of top point
+var firstX = 45/40*bodyX; // firts bend X
+var secX = 33/40*bodyX; // second bend X 
+var firstY = 41/40*bodyY; // first bend y
+var secY = 47/40*bodyY; // second bend Y
+
+
+
+// movements variables 
+var minloopX = 17/20*bodyX;
+var maxloopX = 22/20*bodyX;
+var speed = 2;
+var tipX = minloopX;
+var moving = true;
+
+
+draw = function() {
+    background(207, 254, 255);
+    fill(240, 209, 36);
+ellipse(bodyX, bodyY, bodyW, bodyW); // body
+ellipse(bodyX, bodyY-1/2*bodyW, headW, headW); // head
+triangle(bodyX-8/35*bodyW,earY-2/35*bodyW, bodyX-8/35*bodyW, earY+4/35*bodyW,bodyX, earY); // left ear
+triangle(bodyX+8/35*bodyW,earY-2/35*bodyW, bodyX+8/35*bodyW, earY+4/35*bodyW,bodyX, earY); // right ear
+    
+// tail  
+// created with /https://www.khanacademy.org/computer-programming/beziervertex-drawing-tool/1248677350//
+beginShape();
+vertex(tipX,tipY);
+bezierVertex(firstX+1/16*bodyW,firstY,secX+1/16*bodyW,secY,bodyX, bodyY+bodyW/2);
+bezierVertex(secX-1/16*bodyW,secY,firstX-1/16*bodyW,firstY,tipX,tipY);
+endShape();
+
+
+//movements
+  if (moving) {tipX += speed;} 
+  else {tipX -= speed;}
+
+if (tipX > maxloopX) {moving = false;}
+else if (tipX < minloopX) {moving = true;}
+
+//thanks to Danlendrion in a help request // 
+
+//bodyX = mouseX;
+//bodyY = mouseY;
+};

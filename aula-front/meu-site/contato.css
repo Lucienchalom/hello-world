@@ -1,0 +1,21 @@
+.botoes {
+	text-align: center;
+}
+main a {
+	display:block;
+	text-align: center;
+	padding: 1em;
+	font-size: 140%;
+	color: black;
+	background: #12B2FF;
+	margin: auto;
+	width: 3.5em;
+	margin-top: 10px;
+}
+main a:hover {
+	background: #05A9E6;
+	color: #A14DFA;
+}
+main a:active {
+	color:#E33BC0;
+}

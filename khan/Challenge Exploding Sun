@@ -1,0 +1,53 @@
+
+// the Hight of the sun
+var sunHight = 298;
+
+// the starting size for the sun
+var sunSize = 30; 
+
+// clouds 
+var firstX = 144;
+var secondX = 234;
+var thirdX = 1;
+    
+
+draw = function() {
+
+noStroke();
+// the beautiful blue sky
+background(82, 222, 240);
+
+// The sun, a little circle on the horizon
+fill(255, 204, 0);
+ellipse(200, sunHight, sunSize, sunSize);
+
+// clouds 
+fill(255, 255, 255);
+
+    // first cloud
+ellipse(firstX, 150, 126, 97);
+ellipse(firstX+62, 150, 70, 60);
+ellipse(firstX-62, 150, 70, 60);
+    
+    // second cloud
+ellipse(secondX, 100, 126, 97);
+ellipse(secondX+62, 100, 70, 60);
+ellipse(secondX-62, 100, 70, 60);
+
+    // third cloud
+ellipse(thirdX, 190, 126, 97);
+ellipse(thirdX+62, 190, 70, 60);
+ellipse(thirdX-62, 190, 70, 60);
+
+// The land, blocking half of the sun
+fill(76, 168, 67);
+rect(0, 300, 400, 100);
+
+// actions
+sunSize = sunSize  + 1;
+sunHight = sunHight -4;
+firstX--;
+secondX++;
+thirdX += 3;
+
+};
