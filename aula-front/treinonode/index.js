@@ -1,8 +1,9 @@
 const express = require("express");
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { request } = require("express");
 const app = express();
 
-const produtos = [
+let produtos = [
     {
         nome: 'xbox',
         id: 1,
@@ -15,12 +16,12 @@ const produtos = [
     },
     {
         nome: 'dell inspirom',
-        id: 1,
+        id: 3,
         tipo: 'computador',
     },
     {
         nome: 'teclado mecânico',
-        id: 2,
+        id: 4,
         tipo: 'acessórios',
     }
 ]
@@ -53,13 +54,40 @@ app.get("/:id/produtos", (request, response) => {
         produtos: produtosDoCliente
     });
 })
+
+app.get("/produtos", (request, response) => {
+    response.json({
+        produtos,
+    });
+})
+
 app.post("/produto", (request, response) => {
     const novoProduto = request.body;
     produtos.push(novoProduto);
     response.json(novoProduto);
 })
+app.put("/produto/:id", (request, response) => {
+    const id = request.params.id;
+    const novoProduto = request.body;
+    produtos = produtos.map(produto => {
+        if (id == produto.id) {
+            const novoObjeto = {
+                ...produto,
+                ...novoProduto,
+            }
+            return novoObjeto;
 
+        }
+        return produto
+    })
+    response.end();
+})
 
+app.delete("/produto/:id", (request, response) => {
+    const id = request.params.id;
+    produtos = produtos.filter(produto => produto.id != id);
+    response.end();
+})
 app.listen(3002);
 
 
