@@ -2,15 +2,15 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Jogos</title>
+		<title>Feramentas</title>
 		<link rel="stylesheet" type="text/css" href="reset.css">
 		<link rel="stylesheet" type="text/css" href="barra_nav.css">
-		<link rel="stylesheet" href="jogo.css">
+		<link rel="stylesheet" href="ferramenta.css">
 	</head>
 
 	<body>
 		<header>
-			<h1> Jogos </h1>
+			<h1> Feramentas </h1>
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -23,18 +23,17 @@
 		</header>
 		<main>
 			<div id="nav-lateral">
-				<ul id="lista-jogos">
-					<li class="menu-jogos"><a href="jogo.html">Bala no alvo</a></li>					
-					<li class="menu-jogos"><a href="jogo-adivinha.html"> Adivinha o numero</a></li>
-					<li class="menu-jogos"><a href="jogo-encontre.html">Encontre um dos numeros</a></li>
-					<li class="menu-jogos"><a href="jogo-seta.html">movimento da seta</a></li>
-					<!--<li class="menu-jogos"><a href="jogo-peixe.html">Peixes e algas</a></li>-->
+				<ul id="lista-tool">
+					<li class="menu-tool"><a href="ferramenta.html">Desenhe com barra de cor</a></li>
+					<li class="menu-tool"><a href="ferramenta_click.html">Desenhe com clicks</a></li>
+					<li class="menu-tool"><a href="ferramenta_IMC.html">Calcule o IMC</a></li>
+					<!--<li class="menu-tool"><a href="receita.html">Receita</a></li>-->
 				</ul>	
 			</div>
-			<p>Tente clicar no meio do Alvo! Boa sorte. </p>
+			<p>Desenhe a vontade! Só clicar nas cores em cima pra escolher uma nova e pintar na tela cinza. </p>
 			<canvas width="600" height="400"></canvas>
 
-			<script src="bala-no-alvo.js"></script>
+			<script src="desenha_barra_cores.js" ></script>
 		</main>
 	</body>
 </html>	

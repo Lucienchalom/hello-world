@@ -15,8 +15,8 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="jogo.html">Jogos</a></li>
-					<li><a href="anim.html">Animações</a></li>
-					<li><a href="interac.html">Feramentas</a></li>
+					<li><a href="animacao.html">Animações</a></li>
+					<li><a href="ferramenta.html">Feramentas</a></li>
 					<li><a href="contatos.html">Contato</a></li>
 				</ul>
 			</nav>
@@ -24,55 +24,18 @@
 		<main>
 			<div id="nav-lateral">
 				<ul id="lista-jogos">
+					<li class="menu-jogos"><a href="jogo.html">Bala no alvo</a></li>					
 					<li class="menu-jogos"><a href="jogo-adivinha.html"> Adivinha o numero</a></li>
 					<li class="menu-jogos"><a href="jogo-encontre.html">Encontre um dos numeros</a></li>
-					<li class="menu-jogos"><a href="jogo.html">Bala no alvo</a></li>
 					<li class="menu-jogos"><a href="jogo-seta.html">movimento da seta</a></li>
 					<!--<li class="menu-jogos"><a href="jogo-peixe.html">Peixes e algas</a></li>-->
 				</ul>	
 			</div>
+			<p>Use as setas do teclado para mover a bolinha na tela.</p>
 			<div id="seta">
 				<canvas width="600" height="400"></canvas>
 
-				<script>
-
-				    const tela = document.querySelector('canvas');
-				    const pincel = tela.getContext('2d');
-				    pincel.fillStyle = 'lightgray';
-				    pincel.fillRect( 0, 0, 600, 400);
-
-				    var x = 300;
-				    var y = 200;
-
-				    var esquerda = 37;
-				    var direita = 39;
-				    var cima = 38;
-				    var baixo = 40;
-
-				    const taxa = 10;
-
-				    const recebeTeclado = (evento) => {
-				        if (evento.keyCode == esquerda){ x = x - taxa;}
-				        if (evento.keyCode == cima){y = y - taxa;}
-				        if(evento.keyCode == direita){x = x + taxa;}
-				        if(evento.keyCode == baixo){y = y + taxa;}
-
-				    }
-				    const desenhaCirculo = ( x, y, raio) => {
-				    	pincel.fillStyle = 'violet';
-				    	pincel.beginPath();
-				    	pincel.arc(x, y, raio, 0, 2* Math.PI);
-				    	pincel.fill();
-				    }
-
-				    const animaBolinha = () =>{
-				    	pincel.clearRect( 0, 0, 600, 400);
-				    	desenhaCirculo( x, y, 20);
-				    }
-
-					setInterval( animaBolinha , 20);
-				    document.onkeydown = recebeTeclado;
-				</script>
+				<script src="jogo-seta.js"></script>
 			</div>
 		</main>
 	</body>

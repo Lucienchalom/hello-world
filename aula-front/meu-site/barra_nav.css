@@ -1,26 +1,26 @@
-header{
+header {
 	background: #cccccc;
 	padding: 25px 10px;
 }
-header img{
+header img {
 	display: inline;
 	padding-left: 5px;
 }
-h1{
+h1 {
 	font-weight: bold;
 	font-size: 35px; 
 	display: inline;
 }
-nav{
+nav {
 	position: absolute;
 	top: 0;
 	right: 25px;
 }
-nav li{
+nav li {
 	display: inline;
 	margin:10px 0px 0px 20px;
 }
-nav a{
+nav a {
 	color: #000000;
 	font-size: 22px;
 	text-decoration: none;
@@ -28,4 +28,3 @@ nav a{
 	display: inline-block;
 	padding: 30px 0;
 }
-
